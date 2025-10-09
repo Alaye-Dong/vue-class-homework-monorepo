@@ -1,0 +1,38 @@
+{
+  "name": "vue-class-homework-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Vue Class Homework Monorepo with pnpm workspaces",
+  "type": "module",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r --parallel build",
+    "preview": "pnpm -r --parallel preview",
+    "clean": "pnpm -r exec rm -rf node_modules dist build",
+    "install:all": "pnpm install",
+    "test": "echo \"No tests configured\""
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "keywords": [
+    "vue",
+    "monorepo",
+    "pnpm",
+    "workspace"
+  ],
+  "author": "",
+  "license": "MIT",
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:rolldown-vite@7.1.14"
+    }
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.14",
+    "daisyui": "^5.1.29",
+    "tailwindcss": "^4.1.14"
+  }
+}

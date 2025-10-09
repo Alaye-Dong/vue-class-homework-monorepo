@@ -1,0 +1,25 @@
+# 依赖目录
+node_modules/
+
+# 构建输出
+dist/
+build/
+
+# 编辑器相关
+.vscode/
+.idea/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
+
+# 环境变量
+.env
+.env.local
+.env.*.local
+
+# pnpm
+pnpm-lock.yaml
