@@ -1,6 +1,6 @@
-# Vue 课程作业 Monorepo
+# Vue 课程作业
 
-这个仓库使用 pnpm workspaces 管理所有 Vue 课程的作业项目。
+这个仓库使用 pnpm workspaces 实现 Monorepo 管理所有 Vue 课程的作业项目。
 
 ## 项目结构
 
@@ -77,6 +77,7 @@ cd packages
 mkdir new-homework
 cd new-homework
 # 初始化 Vue 项目
+pnpm create vite . --template vue-ts
 ```
 
 ## 注意事项
@@ -84,3 +85,20 @@ cd new-homework
 - 使用 `pnpm install` 而不是 `npm install` 来确保依赖正确安装
 - 所有包共享同一个 `node_modules`，减少磁盘空间占用
 - 使用 `pnpm -r` 或 `pnpm --filter` 来管理特定包
+
+## 关于 pnpm workspace 安装依赖的说明
+
+在 monorepo 工作区中，pnpm 需要明确指定依赖安装的位置。
+
+### 解决方案
+
+1. **安装到根工作区**（推荐用于共享依赖）：
+```bash
+pnpm install tailwindcss@latest @tailwindcss/vite@latest daisyui@latest -w
+```
+这样所有子项目都可以共享这些依赖，而不需要在每个子项目中重复安装。
+
+2. **安装到特定子项目**：
+```bash
+pnpm install tailwindcss@latest @tailwindcss/vite@latest daisyui@latest --filter homework-1
+```
