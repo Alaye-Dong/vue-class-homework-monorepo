@@ -1,5 +1,13 @@
 <script setup lang="ts">
-
+const navLinks = [
+  { name: '首页', url: '#' },
+  { name: '本科招生', url: '#' },
+  { name: '专科招生', url: '#' },
+  { name: '人才招聘', url: '#' },
+  { name: '招生公示信息', url: '#' },
+  { name: '信息公开', url: '#' },
+  { name: '智慧校园', url: '#' }
+];
 </script>
 
 <template>
@@ -9,13 +17,14 @@
       <p class="text-white ml-2 text-xl font-bold italic font-[宋体] tracking-widest w-full text-center">江西科技学院</p>
     </div>
     <div class="flex items-center space-x-[33px]">
-      <a href="#" class="text-white">首页</a>
-      <a href="#" class="text-white">本科招生</a>
-      <a href="#" class="text-white">专科招生</a>
-      <a href="#" class="text-white">人才招聘</a>
-      <a href="#" class="text-white">招生公示信息</a>
-      <a href="#" class="text-white">信息公开</a>
-      <a href="#" class="text-white">智慧校园</a>
+      <a 
+        v-for="link in navLinks" 
+        :key="link.name"
+        :href="link.url" 
+        class="text-white"
+      >
+        {{ link.name }}
+      </a>
     </div>
   </div>
 </template>
