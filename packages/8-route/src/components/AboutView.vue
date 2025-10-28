@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div>About组件</div>
+  <div class="text-3xl font-bold">About组件</div>
 </template>
 
 <style scoped>
