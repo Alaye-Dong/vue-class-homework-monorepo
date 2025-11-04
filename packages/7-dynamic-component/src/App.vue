@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import MyLeft from './components/MyLeft.vue';
 import MyRight from './components/MyRight.vue';
+import Count from './components/Count.vue';
 
 import { ref } from 'vue'
  
@@ -29,6 +30,7 @@ const tabs: Record<TabKey, any> = {
       </button>
     </div>
     <component :is="tabs[currentTab]"></component>
+    <Count/>
   </div>
 </template>
 
