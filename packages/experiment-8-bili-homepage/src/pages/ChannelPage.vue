@@ -4,7 +4,7 @@
         <h2 class="text-3xl font-semibold text-gray-800 mb-4">🎧 音乐</h2>
 
         <!-- 视频卡片网格 -->
-        <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
+        <div class="grid gap-6 grid-cols-4">
             <VideoCard v-for="(video, index) in videos" :key="index" :video="video" />
         </div>
     </div>
