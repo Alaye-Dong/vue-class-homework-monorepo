@@ -1,0 +1,108 @@
+<template>
+    <div class="p-6 min-h-screen">
+        <!-- 标题 -->
+        <h2 class="text-3xl font-semibold text-gray-800 mb-4">🎧 音乐</h2>
+
+        <!-- 视频卡片网格 -->
+        <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
+            <VideoCard v-for="(video, index) in videos" :key="index" :video="video" />
+        </div>
+    </div>
+</template>
+
+<script setup>
+import VideoCard from '../components/VideoCard.vue';
+
+const videos = [
+    {
+        cover: 'https://placehold.co/300x180/orange/white?text=Autumn+Playlist',
+        title: '【微隐于市】秋日电台 · Adele 专辑 · 深夜抒情曲 | 阿黛尔 | Autumn Playlist',
+        author: '微隐于市',
+        date: '11-04',
+        views: '1675',
+        comments: '0',
+        duration: '43:54'
+    },
+    {
+        cover: 'https://placehold.co/300x180/222/fff?text=钢琴演奏',
+        title: '【顶级干货】沉浸式看吴师练琴',
+        author: '真如KaelWu',
+        date: '11-04',
+        views: '1058',
+        comments: '0',
+        duration: '37:40'
+    },
+    {
+        cover: 'https://placehold.co/300x180/007bff/fff?text=歌单精选',
+        title: '【宝藏歌单合集】“我从未走远 只是你靠近了别人”',
+        author: '音乐分享君',
+        date: '11-01',
+        views: '6.9万',
+        comments: '0',
+        duration: '33:45'
+    },
+    {
+        cover: 'https://placehold.co/300x180/007bff/fff?text=歌单精选',
+        title: '【emo歌曲合集】“音乐一响，回忆登场”',
+        author: '鱿鱼丝音乐',
+        date: '11-03',
+        views: '2.6万',
+        comments: '2',
+        duration: '35:51'
+    },
+    {
+        cover: 'https://placehold.co/300x180/999/fff?text=循环歌单',
+        title: '循环歌单 | 无敌少侠的小曲【VemVem】你这迷人的小夜猫，来吧放松一下！',
+        author: '若勿忘我_毅心',
+        date: '10-31',
+        views: '9.4万',
+        comments: '10',
+        duration: '40:01'
+    },
+    {
+        cover: 'https://placehold.co/300x180/44b/fff?text=英文歌精选',
+        title: '一人一首成名曲《鬼迷心窍》《我只在乎你》《同桌的你》《是否我真的一无所有》《偏偏喜欢你》《老人与海》《慢慢喜欢你》《黄种人》《漂洋过海来看你》《无赖》',
+        author: '音乐美食家',
+        date: '10-30',
+        views: '2475',
+        comments: '0',
+        duration: '41:19'
+    },
+    {
+        cover: 'https://placehold.co/300x180/44b/fff?text=英文歌精选',
+        title: '【高质英文歌曲合集】那些前奏一秒绝杀的单曲循环！',
+        author: 'CAL音梦空间',
+        date: '11-01',
+        views: '1804',
+        comments: '19',
+        duration: '33:46'
+    },
+    {
+        cover: 'https://placehold.co/300x180/cc0000/fff?text=经典摇滚',
+        title: 'The Rolling Stones《Some Girls》1978年专辑精选',
+        author: 'HiRes无损体验馆',
+        date: '10-30',
+        views: '2063',
+        comments: '0',
+        duration: '40:44'
+    },
+    {
+        cover: 'https://placehold.co/300x180/555/fff?text=经典华语',
+        title: '华语金曲回忆杀《以后的以后》《再回到从前》《不要再来伤害我》',
+        author: '爱吃肉的小JQQ',
+        date: '10-30',
+        views: '1370',
+        comments: '58',
+        duration: '43:28'
+    },
+    {
+        cover: 'https://placehold.co/300x180/8844ff/fff?text=Reaction',
+        title: '《相思》越剧版和《凌美地》reaction，美国老师的惊喜反应',
+        author: '929星球的爱丽丝',
+        date: '10-30',
+        views: '1.7万',
+        comments: '75',
+        duration: '27:12'
+    }
+]
+</script>
