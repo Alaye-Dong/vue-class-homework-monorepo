@@ -62,11 +62,5 @@ defineProps({
 </script>
 
 <style scoped>
-/* 文字超出两行省略号 */
-.line-clamp-2 {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    -webkit-line-clamp: 2;
-}
+
 </style>
